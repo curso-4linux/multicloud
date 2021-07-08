@@ -25,7 +25,7 @@ curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compo
 chmod +x /usr/local/sbin/docker-compose
 
 # Clona repositorio do Git da 4Linux
-git clone https://github.com/roberto-farias/multicloud.git
+git clone -n https://github.com/roberto-farias/multicloud.git
 
 # Realiza o checkout do repositorio wordpress-gcp
 cd multicloud
