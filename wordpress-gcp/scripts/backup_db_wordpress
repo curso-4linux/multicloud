@@ -1,0 +1,3 @@
+#!/bin/sh
+docker container run --rm --net wp-net mysql:5.7 mysqldump -h dbserver-wordpress -u wordpress_user --password=4linux wordpress > /tmp/backup_db_wordpress-$(date '+%d-%m-%Y').sql
+gsutil cp /tmp/backup_db_wordpress-$(date '+%d-%m-%Y').sql gs://wordpress-multi/backup/
