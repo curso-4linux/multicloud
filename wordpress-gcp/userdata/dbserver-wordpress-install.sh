@@ -25,7 +25,7 @@ chmod +x /usr/local/sbin/docker-compose
 docker network create wp-net
 
 # Clona repositorio do Git da 4Linux
-git clone https://github.com/roberto-farias/multicloud.git
+git clone -n https://github.com/roberto-farias/multicloud.git
 
 # Realiza o checkout do repositorio wordpress-gcp
 cd multicloud
