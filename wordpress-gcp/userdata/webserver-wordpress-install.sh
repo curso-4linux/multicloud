@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # Configura ambiente de Logs
-
-# Configura ambiente de Logs
 curl -sSO https://dl.google.com/cloudagents/add-logging-agent-repo.sh
 bash add-logging-agent-repo.sh --also-install
 
