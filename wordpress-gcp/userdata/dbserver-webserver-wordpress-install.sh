@@ -22,13 +22,6 @@ chmod +x /usr/local/sbin/docker-compose
 # Cria a rede wp-net no Docker
 docker network create wp-net
 
-# Clona repositorio do Git da 4Linux
-git clone -n https://github.com/roberto-farias/multicloud.git
-
-# Realiza o checkout do repositorio wordpress-gcp
-cd multicloud
-git checkout HEAD moodle-gcp
-
 # Instala agent de monitoramento (stackdriver-agent)
 curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh
 bash add-monitoring-agent-repo.sh --also-install
