@@ -7,8 +7,6 @@ bash add-logging-agent-repo.sh --also-install
 systemctl start google-fluentd
 systemctl enable google-fluentd
 
-# Configura Docker, Docker Compose e inicia container
-
 # Instala o Docker
 apt update
 apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
