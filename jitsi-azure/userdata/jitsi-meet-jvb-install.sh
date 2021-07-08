@@ -13,10 +13,3 @@ docker network create jitsi-net
 # Instala o Docker Compose
 curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/sbin/docker-compose
 chmod +x /usr/local/sbin/docker-compose
-
-# Clona repositorio do Git da 4Linux
-git clone -n https://github.com/roberto-farias/multicloud.git
-
-# Realiza o checkout do repositorio jitsi-azure
-cd multicloud
-git checkout HEAD jitsi-azure
