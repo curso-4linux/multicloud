@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Configura ambiente de Logs
-curl -sSO https://dl.google.com/cloudagents/add-logging-agent-repo.sh
-bash add-logging-agent-repo.sh --also-install
-
-systemctl start google-fluentd
-systemctl enable google-fluentd
-
 # Instala o Docker
 apt update
 apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
@@ -21,6 +14,13 @@ chmod +x /usr/local/sbin/docker-compose
 
 # Cria a rede wp-net no Docker
 docker network create wp-net
+
+# Configura ambiente de Logs
+curl -sSO https://dl.google.com/cloudagents/add-logging-agent-repo.sh
+bash add-logging-agent-repo.sh --also-install
+
+systemctl start google-fluentd
+systemctl enable google-fluentd
 
 # Instala agent de monitoramento (stackdriver-agent)
 curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh
