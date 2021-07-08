@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Cria a pasta /data
-mkdir /data
+sudo mkdir /data
 
 # Monta disco para gravar dados do banco
-mkfs.xfs /dev/xvdf
-mount /dev/xvdf /data
-echo '/dev/xvdf /data xfs defaults 0 0' >> /etc/fstab
+sudo mkfs.xfs /dev/xvdf
+sudo mount -t xfs /dev/xvdf /data
+sudo bash -c 'echo "/dev/xvdf /data xfs defaults 0 0" >> /etc/fstab'
