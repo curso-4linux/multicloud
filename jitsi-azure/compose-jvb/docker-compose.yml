@@ -9,13 +9,13 @@ services:
             - '${JVB_TCP_PORT}:${JVB_TCP_PORT}'
         volumes:
             - ${CONFIG}/jvb:/config:Z
-        logging:
-          driver: syslog
-          options:
-            syslog-address: "udp://127.0.0.1:25224"
-            syslog-format: "rfc3164"
-            syslog-facility: "daemon"
-            tag: "jitsi-jvb"
+        #logging:
+          #driver: syslog
+          #options:
+            #syslog-address: "udp://127.0.0.1:25224"
+            #syslog-format: "rfc3164"
+            #syslog-facility: "daemon"
+            #tag: "jitsi-jvb"
         environment:
             - ENABLE_COLIBRI_WEBSOCKET
             - ENABLE_OCTO
