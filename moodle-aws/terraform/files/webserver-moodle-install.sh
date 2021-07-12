@@ -10,7 +10,7 @@ export ID=$(ec2-metadata -i | awk -F" " '{print $2}')
 sed -i 's|{instance_id}|'"${ID}"'|g' /etc/awslogs/awslogs.conf 
 
 export LOG1='log_group_name = /var/log/messages'
-export LOG2='log_group_name = wordpress'
+export LOG2='log_group_name = moodle'
 sed -i 's|'"${LOG1}"'|'"${LOG2}"'|g' /etc/awslogs/awslogs.conf
 
 systemctl enable awslogsd
