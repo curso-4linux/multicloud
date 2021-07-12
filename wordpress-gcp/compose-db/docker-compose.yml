@@ -18,8 +18,8 @@ services:
       - wp-net
     ports:
       - 3306:3306
-    logging:
-      driver: "gcplogs"
+    #logging:
+      #driver: "gcplogs"
     environment:
       MYSQL_DATABASE: "${MYSQL_DATABASE}"
       MYSQL_USER: "${MYSQL_USER}"
