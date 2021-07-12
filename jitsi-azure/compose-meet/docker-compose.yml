@@ -10,13 +10,13 @@ services:
         volumes:
             - ${CONFIG}/web:/config:Z
             - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z
-        logging:
-          driver: syslog
-          options:
-            syslog-address: "udp://127.0.0.1:25224"
-            syslog-format: "rfc3164"
-            syslog-facility: "daemon"
-            tag: "jitsi-web"    
+        #logging:
+          #driver: syslog
+          #options:
+            #syslog-address: "udp://127.0.0.1:25224"
+            #syslog-format: "rfc3164"
+            #syslog-facility: "daemon"
+            #tag: "jitsi-web"    
         environment:
             - ENABLE_COLIBRI_WEBSOCKET
             - ENABLE_FLOC
@@ -125,13 +125,13 @@ services:
         volumes:
             - ${CONFIG}/prosody/config:/config:Z
             - ${CONFIG}/prosody/prosody-plugins-custom:/prosody-plugins-custom:Z
-        logging:
-          driver: syslog
-          options:
-            syslog-address: "udp://127.0.0.1:25224"
-            syslog-format: "rfc3164"
-            syslog-facility: "daemon"
-            tag: "jitsi-prosody"      
+        #logging:
+          #driver: syslog
+          #options:
+            #syslog-address: "udp://127.0.0.1:25224"
+            #syslog-format: "rfc3164"
+            #syslog-facility: "daemon"
+            #tag: "jitsi-prosody"      
         environment:
             - AUTH_TYPE
             - ENABLE_AUTH
@@ -195,13 +195,13 @@ services:
         restart: ${RESTART_POLICY}
         volumes:
             - ${CONFIG}/jicofo:/config:Z
-        logging:
-          driver: syslog
-          options:
-            syslog-address: "udp://127.0.0.1:25224"
-            syslog-format: "rfc3164"
-            syslog-facility: "daemon"
-            tag: "jitsi-jicofo"      
+        #logging:
+          #driver: syslog
+          #options:
+            #syslog-address: "udp://127.0.0.1:25224"
+            #syslog-format: "rfc3164"
+            #syslog-facility: "daemon"
+            #tag: "jitsi-jicofo"      
         environment:
             - AUTH_TYPE
             - BRIDGE_AVG_PARTICIPANT_STRESS
