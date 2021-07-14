@@ -13,7 +13,6 @@ variable "name_vm" {
   default = "jitsi-meet-azure-terraform"
 }
 
-
 variable "subnet_id" {
   description = "Define o nome da subrede"
   default = "/subscriptions/51e3f409-d738-40cc-898b-0cff5cdf4142/resourceGroups/jitsi/providers/Microsoft.Network/virtualNetworks/jitsi-network/subnets/default"
