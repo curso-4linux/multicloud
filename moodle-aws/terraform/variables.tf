@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "name" {
-  description = "Define o nome da instância"
+  description = "Define o nome da instancia"
   default = "webserver-moodle-terraform"
 }
 
@@ -24,7 +24,7 @@ variable "subnet_id" {
 }
 
 variable "vpc_security_group_ids" {
-  description = "Define o ID do grupo de segurança da Instância Web"
+  description = "Define o ID do grupo de seguranca da Instancia Web"
   default = "sg-045138022bca81f5a"
 }
 
