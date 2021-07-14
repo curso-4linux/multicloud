@@ -13,7 +13,7 @@ variable "region" {
 }
 
 variable "name" {
-  description = "Define o nome da instância Web"
+  description = "Define o nome da instancia Web"
   default = "webserver-wordpress-terraform"
 }
 
@@ -33,6 +33,6 @@ variable "zone" {
 }
 
 variable "network" {
-  description = "Define o nomeda da rede VPC"
+  description = "Define o nome da da rede VPC"
   default = "wordpress"
 }
