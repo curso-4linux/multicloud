@@ -1,3 +1,4 @@
+### Cria a maquina virtual webserver-moodle-terraform
 resource "aws_instance" "webserver-moodle-terraform" {
   ami 		= var.ami
   instance_type = var.instance_type
