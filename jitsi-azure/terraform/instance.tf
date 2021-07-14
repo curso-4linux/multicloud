@@ -1,4 +1,4 @@
-### Cria um endereço de IP ublico
+### Cria um endereço de IP público
 resource "azurerm_public_ip" "jitsi-public-ip" {
     name			= var.name_ip
     location			= var.location
