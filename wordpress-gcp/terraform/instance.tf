@@ -1,3 +1,4 @@
+### Cria a maquina virtual webserver-wordpress-terraform
 resource "google_compute_instance" "webserver-wordpress-terraform" {
   name 		= var.name
   machine_type	= var.machine_type
