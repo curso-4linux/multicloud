@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Cria a pasta /jitsi-meet-confs
-sudo mkdir /jitsi-meet-confs
+# Cria a pasta /jitsi-backup-confs
+sudo mkdir /jitsi-backup-confs
 
-# Monta disco para gravar dados das confs
-sudo mkfs.xfs /dev/sda 
-sudo mount -t xfs /dev/sda /jitsi-meet-confs
-sudo bash -c 'echo "/dev/sda /jitsi-meet-confs xfs defaults 0 0" >> /etc/fstab'
+# Monta disco para gravar backup das configurações do Jitsi
+sudo mkfs.xfs /dev/sdc
+sudo mount -t xfs /dev/sdc /jitsi-backup-confs
+sudo bash -c 'echo "/dev/sdc /jitsi-backup-confs xfs defaults 0 0" >> /etc/fstab'
