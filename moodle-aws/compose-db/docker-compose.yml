@@ -13,7 +13,7 @@ services:
   dbserver-moodle:
     restart: always
     hostname: dbserver-moodle
-    image: mariadb:latest
+    image: bitnami/mariadb:latest
     networks:
       - moodle-net
     ports:
@@ -25,12 +25,13 @@ services:
         #awslogs-group: "dbserver-moodle"
         #awslogs-create-group: "true"
     environment:
-      MYSQL_DATABASE: "${MYSQL_DATABASE}"
-      MYSQL_USER: "${MYSQL_USER}"
-      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      PMA_ARBITRARY: "${PMA_ARBITRARY}"
+      ALLOW_EMPTY_PASSWORD: "${ALLOW_EMPTY_PASSWORD}" 
+      MARIADB_USER: "${MARIADB_USER}" 
+      MARIADB_PASSWORD: "${MARIADB_PASSWORD}" 
+      MARIADB_DATABASE: "${MARIADB_DATABASE}"
     volumes:
-      - "/data:/var/lib/mysql"
+      - "/data:/bitnami/mariadb"
 
 networks:
   moodle-net:
