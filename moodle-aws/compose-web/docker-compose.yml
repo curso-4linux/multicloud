@@ -8,12 +8,12 @@ services:
     ports:
      - 80:8080
      - 443:8443
-    #logging:
-      #driver: "awslogs"
-      #options:
-        #awslogs-region: "sa-east-1"
-        #awslogs-group: "webserver-moodle"
-        #awslogs-create-group: "true"
+    logging:
+      driver: "awslogs"
+      options:
+        awslogs-region: "sa-east-1"
+        awslogs-group: "webserver-moodle"
+        awslogs-create-group: "true"
     environment:
       MOODLE_DATABASE_HOST: "${MOODLE_DATABASE_HOST}"
       MOODLE_DATABASE_PORT_NUMBER: "${MOODLE_DATABASE_PORT_NUMBER}"
