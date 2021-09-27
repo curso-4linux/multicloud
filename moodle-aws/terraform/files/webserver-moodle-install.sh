@@ -1,4 +1,3 @@
- 
 #!/bin/bash
 
 # Remove as configurações de Log do arquivo docker-compose.yml
