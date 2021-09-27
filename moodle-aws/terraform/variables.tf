@@ -30,5 +30,5 @@ variable "vpc_security_group_ids" {
 
 variable "key_name" {
   description = "Define o nome da chave de acesso SSH"
-  default = "multicloud"
+  default = "chave-aws-multicloud"
 }
