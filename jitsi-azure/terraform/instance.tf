@@ -57,6 +57,6 @@ resource "azurerm_linux_virtual_machine" "jitsi-meet-azure-terraform" {
         public_key     = file("~/.ssh/id_rsa.pub")
     }
 
-    custom_data	       = filebase64("files/jitsi-meet-jvb-azure-install.sh")
+    custom_data	       = filebase64("files/jitsi-jvb-azure-install.sh")
 
 }
