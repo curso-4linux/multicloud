@@ -18,12 +18,12 @@ services:
       - moodle-net
     ports:
       - 3306:3306
-    #logging:
-      #driver: "awslogs"
-      #options:
-        #awslogs-region: "sa-east-1"
-        #awslogs-group: "dbserver-moodle"
-        #awslogs-create-group: "true"
+    logging:
+      driver: "awslogs"
+      options:
+        awslogs-region: "sa-east-1"
+        awslogs-group: "dbserver-moodle"
+        awslogs-create-group: "true"
     environment:
       PMA_ARBITRARY: "${PMA_ARBITRARY}"
       ALLOW_EMPTY_PASSWORD: "${ALLOW_EMPTY_PASSWORD}" 
