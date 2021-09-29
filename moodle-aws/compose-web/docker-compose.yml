@@ -2,7 +2,7 @@ version: '3'
 services:
   webserver-moodle:
     restart: always
-    image: bitnami/moodle:latest
+    image: docker.io/bitnami/moodle:3
     networks:
       - moodle-net
     ports:
@@ -23,6 +23,7 @@ services:
       MOODLE_USERNAME: "${MOODLE_USERNAME}"
       MOODLE_PASSWORD: "${MOODLE_PASSWORD}"
       PHP_MAX_INPUT_VARS: "${PHP_MAX_INPUT_VARS}"
+      ALLOW_EMPTY_PASSWORD: "${ALLOW_EMPTY_PASSWORD}"
     volumes:
       - "/moodlesite:/bitnami/moodle"
    
